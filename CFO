@@ -1,0 +1,1017 @@
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ирина Стаховская — CFO</title>
+
+<style>
+/* =========================
+   ОСНОВНЫЕ НАСТРОЙКИ
+========================= */
+
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text: #172033;
+    --muted: #687386;
+    --accent: #635bff;
+    --accent-2: #00b8a9;
+    --dark: #111827;
+    --border: #e6eaf0;
+    --shadow: 0 18px 50px rgba(23, 32, 51, .08);
+    --radius: 22px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(99,91,255,.35), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(0,184,169,.25), transparent 35%),
+        linear-gradient(135deg, #111827 0%, #1e1b4b 55%, #0f766e 100%);
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    right: -180px;
+    top: -220px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+    left: -150px;
+    bottom: -220px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 0;
+}
+
+/* Градиентный прозрачный заголовок */
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 92px);
+    line-height: .95;
+    font-weight: 800;
+    letter-spacing: -4px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #a5b4fc,
+        #5eead4
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow: 0 0 45px rgba(255,255,255,.08);
+}
+
+.hero-subtitle {
+    margin-top: 20px;
+    font-size: clamp(24px, 4vw, 38px);
+    font-weight: 600;
+}
+
+.hero-description {
+    margin-top: 24px;
+    max-width: 850px;
+    color: rgba(255,255,255,.75);
+    font-size: 17px;
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.meta-item {
+    padding: 9px 16px;
+    border-radius: 100px;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.14);
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+}
+
+/* =========================
+   ОБЩИЕ СЕКЦИИ
+========================= */
+
+section {
+    padding: 80px 0;
+}
+
+.section-header {
+    margin-bottom: 38px;
+}
+
+.section-label {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.section-line {
+    width: 70px;
+    height: 4px;
+    border-radius: 10px;
+    margin-top: 18px;
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-2)
+    );
+}
+
+/* =========================
+   ПРОФИЛЬ
+========================= */
+
+.profile {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.profile-number {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--accent);
+}
+
+.profile-text {
+    font-size: 20px;
+    color: #445064;
+}
+
+/* =========================
+   НАВЫКИ
+========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.skill-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: 0 8px 30px rgba(20,30,50,.04);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+    border-color: rgba(99,91,255,.35);
+}
+
+.skill-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(99,91,255,.12),
+        rgba(0,184,169,.12)
+    );
+
+    color: var(--accent);
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.skill-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================
+   ОПЫТ
+========================= */
+
+.timeline {
+    position: relative;
+    margin-top: 50px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+        var(--accent),
+        var(--accent-2)
+    );
+}
+
+.job {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 55px;
+}
+
+.job::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 5px solid var(--accent);
+    box-shadow: 0 0 0 5px rgba(99,91,255,.1);
+}
+
+.job-date {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 100px;
+    background: #e9e7ff;
+    color: #5148d9;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.job h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.job-company {
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.job p {
+    color: #536074;
+}
+
+/* =========================
+   КЕЙСЫ
+========================= */
+
+.cases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.case {
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: var(--radius);
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171d33,
+            #242050
+        );
+
+    box-shadow: var(--shadow);
+}
+
+.case::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -80px;
+    top: -80px;
+    border-radius: 50%;
+    background: rgba(99,91,255,.25);
+}
+
+.case-number {
+    font-size: 13px;
+    font-weight: 800;
+    color: #a5b4fc;
+    letter-spacing: 2px;
+}
+
+.case h3 {
+    margin: 20px 0 12px;
+    font-size: 21px;
+}
+
+.case p {
+    color: rgba(255,255,255,.68);
+    font-size: 14px;
+}
+
+/* =========================
+   ИНСТРУМЕНТЫ / ТЕГИ
+========================= */
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 10px 16px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.tag:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* =========================
+   ОБРАЗОВАНИЕ
+========================= */
+
+.education {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.education-card {
+    padding: 25px;
+    background: white;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.education-year {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.education-card h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.education-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 55px 0;
+    background: #111827;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer h2 {
+    font-size: 28px;
+}
+
+.footer p {
+    color: rgba(255,255,255,.55);
+    margin-top: 5px;
+}
+
+.footer-badge {
+    padding: 12px 18px;
+    border-radius: 100px;
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-2)
+    );
+    font-weight: 700;
+}
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 850px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cases {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .profile-number {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(100% - 28px, 1120px);
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .skills-grid,
+    .education {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 7px;
+    }
+
+    .job {
+        padding-left: 35px;
+    }
+
+    .job::before {
+        width: 16px;
+        height: 16px;
+        border-width: 4px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+    <div class="container hero-content">
+
+        <h1>Ирина<br>Стаховская</h1>
+
+        <div class="hero-subtitle">
+            Финансовый директор · CFO
+        </div>
+
+        <div class="hero-description">
+            Более 20 лет в финансовом управлении, контроллинге,
+            бюджетировании и финансовом планировании.
+        </div>
+
+        <div class="hero-meta">
+            <span class="meta-item">Москва</span>
+            <span class="meta-item">20+ лет опыта</span>
+            <span class="meta-item">English C1</span>
+            <span class="meta-item">CIMA P1, P2</span>
+            <span class="meta-item">ДипИФР</span>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- =========================
+     ПРОФИЛЬ
+========================= -->
+
+<section>
+<div class="container">
+
+    <div class="section-header">
+        <div class="section-label">01 / Profile</div>
+        <h2 class="section-title">Профессиональный профиль</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="profile">
+
+        <div class="profile-number">20+</div>
+
+        <div class="profile-text">
+            Финансовый директор с более чем 20-летним опытом
+            в финансовом управлении, контроллинге,
+            бюджетировании и финансовом планировании.
+
+            <br><br>
+
+            Опыт работы в международных компаниях и взаимодействия
+            с российским и зарубежным менеджментом.
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     КОМПЕТЕНЦИИ
+========================= -->
+
+<section>
+<div class="container">
+
+    <div class="section-header">
+        <div class="section-label">02 / Expertise</div>
+        <h2 class="section-title">Ключевые компетенции</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <div class="skill-icon">01</div>
+            <h3>Финансовая стратегия</h3>
+            <p>Стратегическое планирование, бюджетирование и FP&A.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">02</div>
+            <h3>Отчётность</h3>
+            <p>Управленческая и финансовая отчётность, IFRS / МСФО.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">03</div>
+            <h3>Казначейство</h3>
+            <p>Управление денежными потоками, банки и платежные агенты.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">04</div>
+            <h3>Финансовый контроль</h3>
+            <p>Анализ отклонений, P&L, контроль затрат и результатов.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">05</div>
+            <h3>Риски и контроль</h3>
+            <p>Управление рисками, внутренний контроль и аудит.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">06</div>
+            <h3>Автоматизация</h3>
+            <p>Автоматизация учёта и отчётности, 1С и финансовые системы.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">07</div>
+            <h3>Управление командами</h3>
+            <p>Руководство финансовыми, бухгалтерскими и юридическими функциями.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">08</div>
+            <h3>Бизнес-процессы</h3>
+            <p>Оптимизация финансовых и связанных бизнес-процессов.</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">09</div>
+            <h3>Международная среда</h3>
+            <p>Работа с российским и зарубежным руководством.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     ОПЫТ
+========================= -->
+
+<section>
+<div class="container">
+
+    <div class="section-header">
+        <div class="section-label">03 / Career</div>
+        <h2 class="section-title">Опыт работы</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="timeline">
+
+        <article class="job">
+
+            <div class="job-date">
+                Ноябрь 2020 — настоящее время
+            </div>
+
+            <h3>Финансовый директор</h3>
+
+            <div class="job-company">
+                Aspire Lifestyles EECA
+            </div>
+
+            <p>
+                Руководство финансовым, бухгалтерским и юридическим
+                направлениями, команда 6 человек. Бюджетирование,
+                FP&A, управленческая отчётность, МСФО, казначейство,
+                внутренний контроль, управление рисками, аудит.
+                Автоматизация учёта: 1С Бухгалтерия, 1С Бит-Финанс.
+                Взаимодействие с руководством в России, США и Сингапуре.
+            </p>
+
+        </article>
+
+
+        <article class="job">
+
+            <div class="job-date">
+                Февраль 2015 — ноябрь 2020
+            </div>
+
+            <h3>Руководитель финансового отдела</h3>
+
+            <div class="job-company">
+                Eberspaecher Climate Control RUS
+            </div>
+
+            <p>
+                Финансовое планирование и контроль 6 филиалов,
+                бюджетирование, прогнозирование, управленческая
+                отчётность, IFRS/GAAP, казначейство, хеджирование,
+                контроль затрат и бизнес-проектов.
+                Команда — 2 сотрудника.
+            </p>
+
+        </article>
+
+
+        <article class="job">
+
+            <div class="job-date">
+                Август 2011 — февраль 2015
+            </div>
+
+            <h3>Финансовый контролер</h3>
+
+            <div class="job-company">
+                Artsana RUS · CHICCO
+            </div>
+
+            <p>
+                Финансовый контроль и планирование, бюджетирование,
+                управленческая отчётность, анализ затрат и отклонений,
+                IFRS/Italian GAAP. Руководство командой из 4 человек.
+                Руководитель проекта автоматизации учёта и отчётности
+                в 1С.
+            </p>
+
+        </article>
+
+        <article class="job">
+
+            <div class="job-date">
+                Ранее
+            </div>
+
+            <h3>Финансовый и IT-профиль</h3>
+
+            <div class="job-company">
+                Различные компании и проекты
+            </div>
+
+            <p>
+                Консультант по 1С и учёту/налогообложению,
+                главный бухгалтер, программист баз данных.
+            </p>
+
+        </article>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     КЕЙСЫ
+========================= -->
+
+<section>
+<div class="container">
+
+    <div class="section-header">
+        <div class="section-label">04 / Cases</div>
+        <h2 class="section-title">Ключевые профессиональные кейсы</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="cases">
+
+        <div class="case">
+            <div class="case-number">CASE 01</div>
+            <h3>Автоматизация финансового учёта</h3>
+            <p>
+                Руководство автоматизацией учёта и отчётности
+                с использованием решений 1С.
+            </p>
+        </div>
+
+        <div class="case">
+            <div class="case-number">CASE 02</div>
+            <h3>Финансовое управление группой</h3>
+            <p>
+                Планирование и финансовый контроль деятельности
+                шести филиалов, бюджетирование и прогнозирование.
+            </p>
+        </div>
+
+        <div class="case">
+            <div class="case-number">CASE 03</div>
+            <h3>Международная отчётность</h3>
+            <p>
+                Работа с IFRS/МСФО, GAAP и взаимодействие
+                с международным руководством.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     ИНСТРУМЕНТЫ
+========================= -->
+
+<section>
+<div class="container">
+
+    <div class="section-header">
+        <div class="section-label">05 / Tools</div>
+        <h2 class="section-title">Инструменты и квалификации</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="tools">
+
+        <span class="tag">1С Бухгалтерия</span>
+        <span class="tag">1С Бит-Финанс</span>
+        <span class="tag">1С — Управление торговлей</span>
+        <span class="tag">1С — преподаватель</span>
+        <span class="tag">Excel</span>
+        <span class="tag">SAP BW</span>
+        <span class="tag">SAP BCS</span>
+        <span class="tag">Oracle Hyperion</span>
+        <span class="tag">Cognos</span>
+        <span class="tag">IFRS / МСФО</span>
+        <span class="tag">CIMA P1</span>
+        <span class="tag">CIMA P2</span>
+        <span class="tag">ДипИФР</span>
+        <span class="tag">Финансовый контроль</span>
+        <span class="tag">FP&A</span>
+        <span class="tag">Treasury</span>
+        <span class="tag">Budgeting</span>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     ОБРАЗОВАНИЕ
+========================= -->
+
+<section>
+<div class="container">
+
+    <div class="section-header">
+        <div class="section-label">06 / Education</div>
+        <h2 class="section-title">Образование</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="education">
+
+        <div class="education-card">
+            <div class="education-year">2020</div>
+            <h3>МИРБИС</h3>
+            <p>
+                Менеджмент и управление организацией,
+                Президентская программа.
+            </p>
+        </div>
+
+        <div class="education-card">
+            <div class="education-year">2018</div>
+            <h3>РЭУ им. Г.В. Плеханова</h3>
+            <p>
+                Финансы и кредит,
+                профессиональная переподготовка.
+            </p>
+        </div>
+
+        <div class="education-card">
+            <div class="education-year">2011</div>
+            <h3>НИУ ВШЭ</h3>
+            <p>
+                Экономика, годовое обучение.
+            </p>
+        </div>
+
+        <div class="education-card">
+            <div class="education-year">2008</div>
+            <h3>МИЭТ</h3>
+            <p>
+                Инженер-программист.
+                Высшее образование.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     ДОПОЛНИТЕЛЬНО
+========================= -->
+
+<section>
+<div class="container">
+
+    <div class="section-header">
+        <div class="section-label">07 / Additional</div>
+        <h2 class="section-title">Дополнительная информация</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="tools">
+
+        <span class="tag">Английский C1</span>
+        <span class="tag">Русский — родной</span>
+        <span class="tag">Директорский курс — Самолов Групп</span>
+        <span class="tag">Водительские права категории B</span>
+        <span class="tag">Собственный автомобиль</span>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+            <h2>Ирина Стаховская</h2>
+            <p>Финансовый директор · CFO</p>
+        </div>
+
+        <div class="footer-badge">
+            20+ лет в финансах
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+```
